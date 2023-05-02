@@ -1,0 +1,123 @@
+<%- include('navbar') %>
+<div class="container-fluid">
+  <!-- HOME IMAGEN Y PORTADA -->
+  <div class="row home">
+    <div class="col-sm-12 col-lg-12 d-flex justify-content-center TITLE p-5">
+      <h1>TRAINIMALS</h1>
+    </div>
+  </div>
+  <!-- SECCION 1 TITULO DESCRIPCION-->
+  <div class="row segunda">
+    <div
+      class="col-12 d-flex flex-column justify-content-center align-items-center text-center p-5"
+    >
+      <h3>Animals and Trainers</h3>
+      <h5>
+        This is one of the most beautiful communities full of enthusiastic
+        trainers in love for their animals And animals in love for their
+        trainers
+      </h5>
+    </div>
+  </div>
+  <!-- IMAGEN CINTA-->
+  <div class="cinta p-5"></div>
+  <!-- SECCION 2 TOP TRAINERS -->
+  <!-- Titulo de seccion -->
+  <div class="row">
+    <div
+      class="col-sm-12 col-lg-12 d-flex flex-column justify-content-center align-items-center pt-3 pb-3"
+    >
+      <h1>TOP Trainers</h1>
+      <h3 id="trainers">of this month</h3>
+    </div>
+  </div>
+  <!-- trainer y jirafa-->
+  <div class="row tr">
+    <!-- TRAINER -->
+    <div class="col-sm-12 col-lg-6 picture p-1">
+      <% result.forEach(trainer => { %>
+      <div class="cardpropia d-flex flex-column p-1">
+        <img
+          src="/images/trainer/<%- trainer.picture %>"
+          class=""
+          alt="..."
+          width="200px"
+          height="200px"
+        />
+        <!-- nombre -->
+        <h3 class="nameindex"><%- trainer.name %></h3>
+        <!-- boton -->
+        <a href="/trainer/oneTrainer/<%- trainer.trainer_id %>"
+          ><button class="botonIndex">MORE INFO</button></a
+        >
+      </div>
+      <% }) %>
+    </div>
+    <!-- JIRAFA-->
+    <div class="col-sm-12 col-lg-6 jira">
+      <img
+        src="/images/webImages/girafa.png"
+        alt=""
+        width="400px"
+        height="600px"
+      />
+    </div>
+  </div>
+  <!-- SECCION 3 CARDS -->
+  <section class="row tres">
+    <!-- JOIN -->
+    <div
+      class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center text-center"
+    >
+      <a href="/trainer/register">
+        <div class="card align-items-center shad" style="width: 18rem">
+          <img src="" class="card-img-top img-fluid" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Join</h5>
+            <p class="card-text">
+              Trainimals can also be your community, access now and connect with
+              the many other trainers like you and show us your animals and what
+              they are capable of
+            </p>
+          </div>
+        </div></a
+      >
+    </div>
+    <!-- LEARN -->
+    <div
+      class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center text-center"
+    >
+      <a href="/trainer">
+        <div class="card align-items-center shad" style="width: 18rem">
+          <img src="/images/supportIcon.png" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Learn</h5>
+            <p class="card-text">
+              Learn from the tricks of other trainers and apply them to your
+              animals, show yourself that you can do it
+            </p>
+          </div>
+        </div></a
+      >
+    </div>
+    <!-- SHARE -->
+    <div
+      class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center text-center"
+    >
+      <a href="/trainer/login">
+        <div class="card align-items-center shad" style="width: 18rem">
+          <img src="" class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Share</h5>
+            <p class="card-text">
+              Share your animals and their tricks with the rest of the Trainimal
+              community, we are looking forward to seeing hundreds of animals
+            </p>
+          </div>
+        </div></a
+      >
+    </div>
+  </section>
+</div>
+
+<%- include('footer') %>

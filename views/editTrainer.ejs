@@ -1,0 +1,108 @@
+<%- include('navbar') %>
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1>Edit Info Trainimal</h1>
+      <!-- action -->
+      <form
+        action="/trainer/editTrainer/<%- result[0].trainer_id %>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <!-- name -->
+        <div class="mb-3">
+          <label for="name" class="form-label">insert name</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="name"
+            value="<%- result[0].name %>"
+          />
+        </div>
+        <!-- last name -->
+        <div class="mb-3">
+          <label for="last name" class="form-label">surname</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="last_name"
+            value="<%- result[0].last_name %>"
+          />
+        </div>
+        <!-- phone -->
+        <div class="mb-3">
+          <label for="phone" class="form-label">contact number</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="phone"
+            value="<%- result[0].phone %>"
+          />
+        </div>
+        <!-- email -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            value="<%- result[0].email %>"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <!-- motivation -->
+        <div class="mb-3">
+          <label for="description" class="form-label">motivation</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="motivation"
+            value="<%- result[0].motivation %>"
+          />
+        </div>
+        <!-- picture -->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"
+            >Renew your old picture</label
+          >
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+            name="img"
+          />
+        </div>
+        <!-- button -->
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <div class="returnBoton pe-5">
+            <a href=""> <button class="butonGeneral3">Return</button></a>
+          </div>
+          <button class="butonGeneral" type="submit">Send</button>
+
+          <input class="butonGeneral2" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-12 col-lg-6 footPrint">
+      <div>
+        <img
+          src="/images/webImages/pajaritosprueba.png"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') %>

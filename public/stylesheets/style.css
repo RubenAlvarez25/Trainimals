@@ -1,0 +1,445 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: beige
+}
+nav{
+  border-radius: 10px;
+  padding:30px !important;
+  margin-bottom: 50px !important;
+}
+.navbar{
+  color:white !important;
+  background-color: rgba(97, 139, 25, 0.73)!important;
+}
+footer{
+  margin: 50px !important;
+}
+a {
+  text-decoration: none;
+  color: #00B7FF;
+}
+.butonGeneral{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(97, 139, 25, 0.465)
+}
+.butonGeneral2{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(25, 109, 139, 0.465)
+
+  
+}
+.butonGeneral3{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(139, 105, 25, 0.465) 
+}
+
+.butonGeneral3:hover{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(139, 105, 25) 
+  
+}
+
+
+
+
+.incorrecto{
+  color: rgba(255, 0, 0, 0.544);
+}
+/* PORTADA */
+.home{
+  background-image: url(/images/webImages/FondoPALEQUE.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 206px);
+  opacity: 0.95!important;
+  border-radius: 10px !important;
+}
+.TITLE h1{
+  font-family: 'Noto Serif Khojki', serif;
+  padding-top: 50px;
+  color:  rgba(255, 247, 0, 0.6);
+  font-size: 160px;
+}
+/* IMAGEN CINTA */
+.cinta{
+  background-image: url(/images/webImages/cintaSavana.png);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35vh;
+
+  opacity: 0.90;
+}
+/* TRAINER TOP  */
+.picture{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.picture img{
+  border: 3px solid rgba(255, 247, 0, 0.6);
+  object-fit: cover !important;
+  border-radius: 20px;
+  opacity: 0.95!important;
+}
+.nameindex{
+  padding-top: 20px;
+}
+
+/* BOTON INDEX */
+.botonIndex{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 247, 0, 0.386); ;
+}
+.botonIndex:hover{
+  
+  color: black;
+  background-color:rgba(255, 247, 0, 0.603); ;
+  
+
+}
+/* JIRAFA */
+.jira img{
+  margin-left: 150px;
+  object-fit: cover;
+}
+/* IMAGEN SELVA */
+.tres{
+  background-image: url(/images/webImages/FondoCR.jpg);
+  background-size: cover;
+  background-position: center;
+  height: calc(70vh);
+  opacity: 0.95!important;
+  border-radius: 10px !important;
+}
+/* CARDS */
+.shad{
+    color:rgba(255, 247, 0, 0.862);
+    background-color: transparent;
+    box-shadow: 7px 7px 35px -1px rgba(0,0,0,0.75);
+}
+.shad:hover{
+      border: 1px solid yellow;
+}
+
+.cardT{
+  color: rgb(25, 0, 255);
+  border-radius: 10px;
+}
+/* CONJUNTO CON FOTO */
+.birds{
+  background-image: url("/images/webImages/pajarosSil.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* IMAGEN ABAJO */
+.selvita img{
+  border-radius: 10px;
+  width: 92vw;
+  height: 50vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ONE TRAINER */
+.oneTrainer{
+  background-image: url(/images/webImages/selvanocturna.jpg);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: calc(40vh - 100px);
+  opacity: 0.86;
+  border-radius: 10px;
+}
+.name{
+  margin-right: 20px;
+}
+.surname{
+  margin-left: 20px;
+}
+
+.botonOneEdit{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 183, 0, 0.386); ;
+
+}
+.botonOneEdit:hover{
+  color: black;
+  background-color:rgba(255, 183, 0, 0.603); ;
+}
+
+
+.botonOneDelete{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 64, 0, 0.386); 
+  }
+
+  .botonOneDelete:hover{
+    color: black;
+    background-color:rgba(255, 64, 0, 0.603); ;
+  }
+
+.moti p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-style:italic;
+}
+/* IMAGEN ANIMALES SUNSET */
+.rafa img{
+  padding-right: 70px;
+   padding-bottom: 50px;
+ }
+
+ /* BACKGROUND HOJAS */
+ .back{
+  background-image: url("/images/webImages/back.jpg");
+  border-radius: 20px;
+  color:white
+}
+/* IMAGEN ANIMALES */
+.animalPicture img{
+  border-radius: 20px;
+  object-fit: cover;
+  opacity:0.85;
+}
+/* INFORMACION ANIMAL */
+.infoAnimal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+/* BOTONES ANIMAL */
+
+.botonAnimalEdit{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 183, 0, 0.386); 
+
+}
+.botonAnimalEdit:hover{
+  color: black;
+  background-color:rgba(255, 183, 0, 0.603); ;
+
+}
+.botonAnimalDelete{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 64, 0, 0.386);
+
+}
+.botonAnimalDelete:hover{
+  color: black;
+  background-color:rgba(255, 64, 0, 0.603); ;
+
+}
+
+/* ALLTRAINERS */
+/* INDIVIDUALES */
+.pictureAll{
+  padding: 20px;
+}
+.pictureAll img{
+  object-fit: cover !important;
+  border-radius: 20px;
+  width:200px;
+  border: 10px solid rgba(255, 183, 0, 0.386)
+}
+/* BOTON */
+.botonAll{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 180px;
+  height: 50px;
+  border-radius: 20px;
+  background-color:rgba(255, 247, 0, 0.386); ;
+}
+
+.botonAll:hover{
+
+  color: black;
+  background-color:rgba(255, 247, 0, 0.603); ;
+}
+.botonJoin{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgba(255, 183, 0, 0.386); ;
+}
+.botonJoin:hover{
+
+  color: black;
+  background-color:rgba(255, 183, 0, 0.708); ;
+}
+
+/* EDIT ANIMAL */
+
+.editNewAnimal img {
+ 
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+
+
+
+/* LOGIN PAGE */
+.lianas{
+  background-image: url("/images/webImages/lianasSil.png");
+  border-radius: 10px;
+  height: 50vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.butonLogin{
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(97, 139, 25, 0.874)
+}
+
+.butonLoginReset{
+
+  color: black;
+  font-family: 'Noto Serif Khojki', serif;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(25, 109, 139, 0.896)
+
+  
+}
+
+
+
+
+/* SUCCESS PAGE */
+.JungleSuc{
+  background-image: url("/images/webImages/JungleSuc.png");
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+.JungleSuc h1{
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-left: 300px;
+
+}
+.JungleSuc h3{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-left: 480px;
+}
+.JungleSuc button{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-left: 800px;
+
+}
+
+
+/* MEDIA QUERY */
+
+@media(max-width:390px){
+  .body{
+    padding: 0px!important;
+  }
+  /* PAGINA INDEX*/
+  .TITLE h1{
+    font-family: 'Noto Serif Khojki', serif;
+    padding-top: 50px;
+    color:  rgba(255, 247, 0, 0.6);
+    font-size: 45px;
+  }
+  .picture{
+    display: flex;
+    flex-direction: column;
+  }
+  .cardpropia h3{
+    margin-bottom: 20px;
+  }
+  .jira{
+    display: none;
+  }
+  .shad{
+    padding: 10px;
+    color: black;
+    background-color: transparent;
+    box-shadow: 7px 7px 35px -1px rgba(0,0,0,0.75);
+}
+.tres{
+  background-image: none;
+}
+/* ONE TRAINER */
+
+.infoAnimal{
+  text-align: center;
+  align-items: center;
+
+}
+.emailWhatsap{
+
+  flex-direction: column
+
+}
+
+  }
+
+
+

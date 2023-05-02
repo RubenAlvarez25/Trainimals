@@ -1,0 +1,116 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+  <div class="row">
+    <!-- imagen footprints -->
+    <div class="col-sm-12 col-lg-6 footPrint">
+      <div>
+        <img src="/images/webImages/footprints.png" class="img-fluid" alt="" />
+      </div>
+    </div>
+    <!-- formulario registro animal -->
+    <div
+      class="col-sm-12 col-lg-6 d-flex flex-column justify-content-center align-items-start"
+    >
+      <h2 class="">New Animal</h2>
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <!-- name -->
+          <label for="animal name" class="form-label">animal name</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_name"
+            required
+          />
+        </div>
+        <!-- Especie -->
+        <div class="mb-3">
+          <label for="breed" class="form-label">breed</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_variety"
+            required
+          />
+        </div>
+        <!-- Skill -->
+        <div class="mb-3">
+          <label for="skill" class="form-label">skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_skill"
+            required
+          />
+        </div>
+        <!-- Region -->
+        <div class="mb-3">
+          <label for="region" class="form-label">region</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_region"
+            required
+          />
+        </div>
+        <!-- description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="description"
+            required
+          />
+        </div>
+        <!-- image -->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"
+            >choose animal picture</label
+          >
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+            name="img"
+            required
+          />
+        </div>
+        <br />
+        <!-- SELECT TRAINER DESPLEGABLE -->
+        <div class="choose">
+          <p>trained by</p>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="trainer_id"
+            required
+          >
+            <option disabled selected>Trainimal</option>
+            <% result.forEach(trainer => { %>
+            <option value="<%- trainer.trainer_id %>">
+              <%- trainer.name %>
+            </option>
+            <% }) %>
+          </select>
+        </div>
+
+        <!-- button -->
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <button class="butonGeneral" type="submit">Send</button>
+
+          <input class="butonGeneral2" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>

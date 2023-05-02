@@ -1,0 +1,100 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+  <div class="row">
+    <% result.forEach(animal => { %>
+    <!-- MUESTA INFO ANIMAL -->
+    <div
+      class="col-sm-4 col-lg-6 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1><%- animal.animal_name %></h1>
+      <h2><%- animal.animal_variety %></h2>
+      <h3><%- animal.description %></h3>
+      <img
+        src="/images/animals/<%- animal.animal_image %>"
+        alt=""
+        width="300px"
+        height="300px"
+      />
+    </div>
+    <button>return</button>
+    <% }) %>
+    <!-- formulario registro animal -->
+    <div
+      class="col-sm-4 col-lg-6 d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- ACTION -->
+      <form
+        action="/animal/editAnimal/<%- result[0].animal_id %>/<%- result[0].trainer_id %>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <!-- name -->
+          <label for="animal name" class="form-label">animal name</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            value="<%- result[0].animal_name %>"
+            name="animal_name"
+          />
+        </div>
+        <!-- Especie -->
+        <!-- <div class="mb-3">
+          <label for="breed" class="form-label">breed</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            value="<%- result[0].animal_variety %>"
+            name="animal_variety"
+          />
+        </div> -->
+        <!-- Skill -->
+        <!-- <div class="mb-3">
+          <label for="skill" class="form-label">skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            value="<%- result[0].animal_skill %>"
+            name="animal_skill"
+          />
+        </div> -->
+        <!-- region -->
+        <!-- <div class="mb-3">
+          <label for="region" class="form-label">region</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            value="<%- result[0].animal_region %>"
+            name="animal_region"
+          />
+        </div> -->
+        <!-- description -->
+        <!-- <div class="mb-3">
+          <label for="description" class="form-label">description</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            value="<%- result[0].description %>"
+            name="description"
+          />
+        </div> -->
+        <br />
+        <!-- button -->
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <button class="butonGeneral" type="submit">Send</button>
+
+          <input class="butonGeneral2" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>

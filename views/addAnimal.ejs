@@ -1,0 +1,74 @@
+<%-include('navbar')%>
+<div class="container-fluid">
+  <div class="row">
+    <!-- formulario registro animal -->
+    <div
+      class="col-sm-4 col-lg-12 d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- ACTION -->
+      <form
+        action="/animal/addAnimal/<%- trainer_id %>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <!-- name -->
+          <label for="animal name" class="form-label">animal name</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_name"
+            required
+          />
+        </div>
+        <!-- Especie -->
+        <div class="mb-3">
+          <label for="breed" class="form-label">breed</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_variety"
+            required
+          />
+        </div>
+        <!-- Skill -->
+        <div class="mb-3">
+          <label for="skill" class="form-label">skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="animal_skill"
+            required
+          />
+        </div>
+        <!-- image -->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"
+            >choose animal picture</label
+          >
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+            name="img"
+          />
+        </div>
+        <br />
+        <!-- SELECT TRAINER DESPLEGABLE -->
+        <!-- button -->
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <button class="btn btn-primary" type="submit">Send</button>
+
+          <input class="btn btn-primary" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>

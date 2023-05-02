@@ -1,0 +1,64 @@
+<%- include('navbar') %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 d-flex align-items-center">
+      <h1>Log in</h1>
+    </div>
+    <div class="col-12 d-flex justify-content-center align-items-center lianas">
+      <!-- action -->
+      <form
+        action="/trainer/login"
+        method="post"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center incorrecto"
+        >
+          <h3><%- message %></h3>
+        </div>
+        <!-- email -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <!-- password -->
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Password</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="password"
+              name="password"
+              id="inputPassword6"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+            />
+          </div>
+          <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <button class="butonLogin" type="submit">Send</button>
+
+          <input class="butonLoginReset" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('footer') %>

@@ -1,0 +1,117 @@
+<%- include('navbar') %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <img src="/images/webImages/monkeysil.png" class="img-fluid alt =" />
+      </div>
+    </div>
+    <div
+      class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1>Join us</h1>
+      <!-- action -->
+      <form
+        action="/trainer/register"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <h6 class="incorrecto d-flex justify-content-center align-items-center">
+          <%- message %>
+        </h6>
+        <div class="mb-3">
+          <!-- name -->
+          <label for="name" class="form-label">insert name</label>
+          <input type="text" class="form-control" id="" name="name" required />
+        </div>
+        <!-- last name -->
+        <div class="mb-3">
+          <label for="last name" class="form-label">surname</label>
+          <input
+            type="text"
+            class="form-control"
+            id=""
+            name="last_name"
+            required
+          />
+        </div>
+        <!-- phone -->
+        <div class="mb-3">
+          <label for="phone" class="form-label">contact number</label>
+          <input type="text" class="form-control" id="" name="phone" required />
+        </div>
+        <!-- email -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <!-- password -->
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Password</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="password"
+              name="password"
+              id="inputPassword6"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+              required
+            />
+          </div>
+          <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+              Must be 8-20 characters long.
+            </span>
+          </div>
+        </div>
+        <!-- motivation -->
+        <div class="mb-3">
+          <label for="description" class="form-label">motivation</label>
+          <input type="text" class="form-control" id="" name="motivation" />
+        </div>
+        <!-- picture -->
+        <div class="mb-3">
+          <label for="formFileSm" class="form-label"
+            >choose profile picture</label
+          >
+          <input
+            class="form-control form-control-sm"
+            id="formFileSm"
+            type="file"
+            name="img"
+          />
+        </div>
+        <!-- button -->
+        <div
+          class="button d-flex justify-content-evenly align-items-center p-1"
+        >
+          <button class="butonGeneral" type="submit">Send</button>
+
+          <input class="butonGeneral2" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+    <div class="col-4">
+      <div>
+        <img src="/images/webImages/apeSiluet.png" class="img-fluid alt=" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-lg-12 selvita">
+      <img src="/images/webImages/animalKingdom.png" class="img-fluid" alt="" />
+    </div>
+  </div>
+</div>
+<%- include('footer') %>

@@ -1,0 +1,225 @@
+<%- include('navbar') %>
+<div class="container-fluid">
+  <!-- HOME ONETRAINER -->
+  <div class="row oneTrainer">
+    <div class="col-12 d-flex justify-content-center p-5">
+      <h1></h1>
+    </div>
+  </div>
+
+  <!-- TRAINERS  -->
+  <!-- nombre trainer -->
+  <div class="row">
+    <div
+      class="col-sm-12 col-lg-12 d-flex flex-column justify-content-center align-items-center pt-3"
+    >
+      <h1>Trainimal</h1>
+      <!-- Nombre trainer -->
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="nameTrainer"><%- resultTrainer[0].name %></h3>
+
+        <h3 class="surname"><%- resultTrainer[0].last_name %></h3>
+      </div>
+    </div>
+  </div>
+  <!-- info trainer, picture y botones -->
+  <div class="row">
+    <!-- DIV INFO -->
+    <div
+      class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-start p-3"
+    >
+      <!-- DIV ICONOS -->
+      <div
+        class="contact d-flex justify-content-center text-center align-items-center"
+      >
+        <div
+          class="d-flex justify-content-center text-center align-items-center emailWhatsap"
+        >
+          <a
+            class="btn text-white btn-floating m-3"
+            style="background-color: #dd4b39"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+          <a
+            class="btn text-white btn-floating m-3"
+            style="background-color: #55ee55"
+            href="#!"
+            role="button"
+            ><i class="fab fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+        <!-- DIV INFO -->
+        <div
+          class="d-flex justify-content-center text-center align-items-center emailWhatsap"
+        >
+          <p class="p-3 mt-3"><%- resultTrainer[0].email %></p>
+          <p class="p-3 mt-3"><%- resultTrainer[0].phone %></p>
+        </div>
+      </div>
+      <!--  -->
+      <div class="moti d-flex flex-column">
+        <h6>My Motivation</h6>
+        <p>"<%- resultTrainer[0].motivation %>"</p>
+      </div>
+    </div>
+    <!-- picture trainer -->
+    <div
+      class="col-lg-4 d-flex justify-content-center picture align-items-center flex-column"
+    >
+      <img
+        src="/images/trainer/<%- resultTrainer[0].picture %>"
+        class=""
+        alt=""
+        width="300px"
+        height="300px"
+      />
+      <!-- BOTONES -->
+    </div>
+    <!-- imagen animales sunset -->
+    <div class="col-4 d-flex flex-column justify-content-end align-items-start">
+      <div class="rafa">
+        <img
+          src="/images/webImages/jungle.png"
+          class="img-fluid alt="
+          width="500px"
+          height="400px"
+        />
+      </div>
+    </div>
+    <!-- BOTONES -->
+    <div class="p-2">
+      <!-- edit -->
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="/trainer/editTrainer/<%- resultTrainer[0].trainer_id %>">
+          <button type="button" class="botonOneEdit">Edit info</button></a
+        >
+      </div>
+      <br />
+      <!-- delete -->
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="/trainer/delete/<%- resultTrainer[0].trainer_id %>">
+          <button type="button" class="botonOneDelete">Delete</button></a
+        >
+      </div>
+    </div>
+  </div>
+  <hr />
+  <!-- TITLE secction 2 -->
+  <div class="row">
+    <div
+      class="col-12 d-flex justify-content-center align-items-center text-center"
+    >
+      <h3>The animals I train</h3>
+    </div>
+  </div>
+  <section class="back">
+    <!-- ANIMALS -->
+    <% resultAnimal.forEach(animal => { %>
+    <div class="row">
+      <!-- Foto de animal-->
+      <div
+        class="col-sm-12 col-lg-4 flex-column d-flex justify-content-center my-5 align-items-center animalPicture"
+      >
+        <img
+          src="/images/animals/<%- animal.animal_image %>"
+          class=""
+          alt="..."
+          width="250px"
+          height="250px"
+        />
+      </div>
+      <!-- nombre y description de animal Y BOTONES -->
+      <div class="col-sm-12 col-lg-4 my-5 infoAnimal">
+        <h4 class=""><%- animal.animal_name %></h4>
+        <h5 class=""><%- animal.animal_variety %></h5>
+
+        <h6 class=""><%- animal.animal_skill %></h6>
+
+        <h7 class=""><%- animal.animal_region %></h7>
+
+        <!-- BOTONES -->
+        <div class="pt-5">
+          <div>
+            <a href="/animal/newEdit/<%- animal.animal_id %>">
+              <button type="button" class="botonAnimalEdit">
+                Edit Animal
+              </button></a
+            >
+          </div>
+          <br />
+          <div>
+            <a
+              href="/animal/delete/<%- animal.animal_id %>/<%- animal.trainer_id %>"
+            >
+              <button type="button" class="botonAnimalDelete">Delete</button></a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- info animal -->
+      <div class="col-sm-12 col-lg-4 infoAnimal">
+        <p class="">"<%- animal.description %>"</p>
+      </div>
+    </div>
+    <% }) %>
+  </section>
+  <hr />
+  <!-- UPLOAD ANIMAL -->
+  <section class="oneTrainerDos"></section>
+  <div class="row">
+    <div class="col">
+      <h3>New Buddy</h3>
+      <!-- action< -->
+      <form
+        action="/animal/addAnimal/<%- resultTrainer[0].trainer_id %>"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <!-- name -->
+        <input
+          class="form-control form-control-lg my-3"
+          type="text"
+          placeholder="animal name"
+          aria-label=".form-control-lg example"
+          name="animal_name"
+          required
+        />
+        <input
+          class="form-control form-control-lg my-3"
+          type="text"
+          placeholder="breed"
+          aria-label=".form-control-lg example"
+          name="animal_variety"
+          required
+        />
+        <input
+          class="form-control form-control-lg my-3"
+          type="text"
+          placeholder="Skill"
+          aria-label=".form-control-lg example"
+          name="animal_skill"
+          required
+        />
+        <!-- Imagen animal -->
+        <div class="my-3">
+          <label for="formFileLg" class="form-label"
+            >Upload an image of your friend</label
+          >
+          <input
+            class="form-control form-control-lg"
+            id="formFileLg"
+            type="file"
+            name="img"
+          />
+        </div>
+        <!-- Botones -->
+        <button type="submit" class="butonGeneral">Save</button>
+      </form>
+      <br /><br />
+    </div>
+  </div>
+</div>
+
+<%- include('footer') %>
